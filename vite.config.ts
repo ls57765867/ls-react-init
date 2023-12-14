@@ -39,7 +39,21 @@ export default defineConfig({
     },
     css: {
         postcss: {
-            plugins: [tailwindcss(), autoprefixer(), PostCssPxToViewport()],
+            plugins: [
+                tailwindcss(),
+                autoprefixer({
+                    // 自动添加前缀 的浏览器
+                    overrideBrowserslist: [
+                        'Android 4.1',
+                        'iOS 7.1',
+                        'Chrome > 31',
+                        'ie >= 8',
+                        //'last 2 versions', // 所有主流浏览器最近2个版本
+                    ],
+                    grid: true,
+                }),
+                PostCssPxToViewport(),
+            ],
         },
     },
 })

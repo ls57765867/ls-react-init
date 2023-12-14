@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Test from '@/components/Test'
 import { useRoutes, Outlet, useNavigate, Link } from 'react-router-dom'
+import Toolkit from './pages/toolkit'
 
 function App() {
     const [count, setCount] = useState(0)
@@ -58,6 +59,7 @@ function Router() {
             ],
         },
         { path: '/team/:id?', element: <Test /> },
+        { path: '/toolkit', element: <Toolkit /> },
     ])
     return element
 }
