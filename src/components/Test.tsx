@@ -12,9 +12,11 @@ const Test: FC<interfaceProps> = (props) => {
     const handleClick = function () {
         setNum(num + 2)
     }
+    const str = num + 100
     return (
         <>
             <h1 className='text-blue'>{num}</h1>
+            <h2>{str}</h2>
             <button onClick={handleClick}>+++</button>
             <div className='w-[375px] bg-blue'>来了</div>
         </>
