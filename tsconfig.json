@@ -23,6 +23,6 @@
             "@/*": ["./src/*"]
         }
     },
-    "include": ["src"],
+    "include": ["src", "utils", "./auto-imports.d.ts"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }

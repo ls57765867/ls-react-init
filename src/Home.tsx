@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { useNavigate, Link, Outlet } from 'react-router-dom'
+// import { useNavigate, Link, Outlet } from 'react-router-dom'
 
 function Home() {
     const [count, setCount] = useState(0)
@@ -24,6 +24,8 @@ function Home() {
             <p className='read-the-docs text-red-400'>Click on the Vite and React logos to learn more</p>
             <button onClick={handleNavigate}>跳转</button>
             <Link to='/test'>跳转2</Link>
+            <Switch></Switch>
+            <Button>来了老弟?</Button>
             <Outlet></Outlet>
         </>
     )
